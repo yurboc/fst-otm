@@ -19,10 +19,4 @@ $telegramBotToken = '000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
 $telegramApiUrl = 'https://api.telegram.org/bot'.$telegramBotToken.'/';
 $telegramChatId = '000000000';
 
-$butovohomeBotToken = '000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
-$butovohomeApiUrl = 'https://api.telegram.org/bot'.$butovohomeBotToken.'/';
-
-$berillosBotToken = '1111111111:BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB';
-$berillosApiUrl = 'https://api.telegram.org/bot'.$berillosBotToken.'/';
-
 ?>
