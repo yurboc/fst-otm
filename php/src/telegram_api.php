@@ -5,18 +5,6 @@ require __DIR__ . '/credentials.php';
 function setBotToken($name) {
   global $teleramBotToken;
   global $telegramApiUrl;
-  global $berillosBotToken;
-  global $berillosApiUrl;
-  global $butovohomeBotToken;
-  global $butovohomeApiUrl;
-  if ($name == 'berillos') {
-    $telegramBotToken = $berillosBotToken;
-    $telegramApiUrl = $berillosApiUrl;
-  }
-  else if ($name == 'butovohome') {
-    $telegramBotToken = $butovohomeBotToken;
-    $telegramApiUrl = $butovohomeApiUrl;
-  }
   return true;
 }
 
