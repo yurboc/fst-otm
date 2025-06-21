@@ -1,17 +1,15 @@
 <p>Тест новых идей.</p>
 
-<!-- ---------- ЗДЕСЬ НАЧИНАЕТСЯ КОД ТАБЛИЦ ---------- -->
+<link href="/js/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+<link href="/js/tabulator.min.css" rel="stylesheet" type="text/css" />
+<script src="/js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/js/tabulator.min.js" type="text/javascript"></script>
+<script src="/js/moment.min.js" type="text/javascript"></script>
+<script src="/js/vis-timeline-graph2d.min.js" type="text/javascript"></script>
 
-<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.0/themes/cupertino/jquery-ui.min.css">
-<link rel="stylesheet" type="text/css" href="https://unpkg.com/tabulator-tables@4.8.1/dist/css/tabulator.min.css" />
-<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-<script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.8.1/dist/js/tabulator.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script>
-<script type="text/javascript" src="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.js"></script>
-
-<link rel="stylesheet" type="text/css" href="https://fst-otm.yurboc.ru/table_style.css?v=20211225" />
-<script type="text/javascript" src="https://fst-otm.yurboc.ru/static_json_data_trips.js?v=20211225"></script>
-<script type="text/javascript" src="https://fst-otm.yurboc.ru/table_handlers_trips.js?v=20211225"></script>
+<link href="/data/table_style.css?v=20250621" rel="stylesheet" type="text/css" />
+<script src="/data/static_json_data_trips.js?v=20250621" type="text/javascript"></script>
+<script src="/data/table_handlers_trips.js?v=20250621" type="text/javascript"></script>
 
 <div class="table_control_box">
  <label for="find_name_str">Поиск: по ФИО:</label>
@@ -70,8 +68,8 @@
  <option value="prev6month">Прошедшие полгода</option>
  </optgroup>
  </select>
-
- <span id="search-results"></span>
+ &nbsp;
+ <span id="search-results">&nbsp;</span>
 </div>
 
 <div>
@@ -96,5 +94,3 @@
  Последняя синхронизация: <strong><span id="generated_date_placeholder">неизвестно</span></strong>
  </p>
 </div>
-
-<!-- ---------- ЗДЕСЬ ЗАКАНЧИВАЕТСЯ КОД ТАБЛИЦ ---------- -->
