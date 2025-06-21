@@ -1,0 +1,5 @@
+# Ignore generated JS files
+static_json_data.js
+static_json_data_cat.js
+static_json_data_ref.js
+static_json_data_trips.js
