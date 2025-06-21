@@ -15,7 +15,7 @@ $generator_name = "Разряды";
 // |  Results path     |
 // +-------------------+
 $json_output_file = "static_json_data_cat.js";
-$remote_file = "/www/fst-otm.yurboc.ru/static_json_data_cat.js";
+$remote_file = "/data/static_json_data_cat.js";
 
 // +-------------------+
 // |  Identifiers      |

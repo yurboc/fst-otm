@@ -15,7 +15,7 @@ $generator_name = "Судьи";
 // |  Results path     |
 // +-------------------+
 $json_output_file = "static_json_data_ref.js";
-$remote_file = "/www/fst-otm.yurboc.ru/static_json_data_ref.js";
+$remote_file = "/data/static_json_data_ref.js";
 
 // +-------------------+
 // |  Identifiers      |
