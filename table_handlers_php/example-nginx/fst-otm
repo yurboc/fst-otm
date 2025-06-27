@@ -14,23 +14,14 @@ server {
     index index.html index.htm index.nginx-debian.html index.php phpinfo.php;
 
     location / {
-        # First attempt to serve request as file, then
-        # as directory, then fall back to displaying a 404.
         try_files $uri $uri/ =404;
     }
 
-    # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
-    #
     location ~ \.php$ {
-        #include snippets/fastcgi-php.conf;
-        #fastcgi_pass unix:/var/run/php5-fpm.sock;
         fastcgi_pass unix:/var/run/php/php-fpm.sock;
-
-        #fastcgi_pass  127.0.0.1:9000;
         fastcgi_index index.php;
         include fastcgi_params;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         fastcgi_param PHP_VALUE display_errors=On;
-        #include /etc/nginx/fastcgi.conf;
     }
 }
