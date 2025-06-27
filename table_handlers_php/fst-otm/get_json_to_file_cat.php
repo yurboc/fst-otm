@@ -6,6 +6,8 @@ require __DIR__ . '/../src/credentials.php';
 require __DIR__ . '/../src/telegram_api.php';
 require __DIR__ . '/vendor/autoload.php';
 
+Sentry\init(['dsn' => $sentryDsn]);
+
 // +-------------------+
 // |  Main definitions |
 // +-------------------+

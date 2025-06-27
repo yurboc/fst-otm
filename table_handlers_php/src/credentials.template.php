@@ -19,4 +19,9 @@ $telegramBotToken = '000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
 $telegramApiUrl = 'https://api.telegram.org/bot'.$telegramBotToken.'/';
 $telegramChatId = '000000000';
 
+// +--------------------------+
+// |  Sentry DSN              |
+// +--------------------------+
+$sentryDsn = 'https://your_sentry_dsn_here';
+
 ?>
