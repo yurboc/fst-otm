@@ -2,8 +2,8 @@
 $start_time = microtime(true);
 echo "Begin generation: ".date(DATE_RFC822);
 
-require __DIR__ . '/../src/credentials.php';
-require __DIR__ . '/../src/telegram_api.php';
+require __DIR__ . '/credentials.php';
+require __DIR__ . '/telegram_api.php';
 require __DIR__ . '/vendor/autoload.php';
 
 Sentry\init(['dsn' => $sentryDsn]);
@@ -25,19 +25,14 @@ $remote_file = "/data/static_json_data.js";
 $spreadsheetId = '1bkbojWWjPXLkOXGd6yZRqDVlsyXurWxL3ePQzvTM3Jc';
 $range = 'Сводный!A2:M';
 
-// +------------------------+
-// |  Access to Google API  |
-// +------------------------+
-putenv( 'GOOGLE_APPLICATION_CREDENTIALS=' . $googleAccountKeyFilePath );
-
 /**
  * Returns an authorized API client.
  * @return Google_Client the authorized client object
  */
-function getClient()
+function getClient($googleServiceAccount)
 {
     $client = new Google_Client();
-    $client->useApplicationDefaultCredentials();
+    $client->setAuthConfig($googleServiceAccount);
     $client->setApplicationName('Google Sheets API test for FST OTM');
     $client->addScope( 'https://www.googleapis.com/auth/spreadsheets.readonly' );
     $client->addScope( 'https://www.googleapis.com/auth/drive.readonly' );
@@ -49,7 +44,7 @@ function getClient()
 // ----------------------------------------------------
 
 // Get the API client and construct the service object.
-$client = getClient();
+$client = getClient($googleServiceAccount);
 $service_sheets = new Google_Service_Sheets($client);
 $service_drive = new Google_Service_Drive($client);
 
